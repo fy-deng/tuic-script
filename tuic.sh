@@ -228,11 +228,11 @@ Description=tuic Service
 Documentation=https://github.com/EAimTY/tuic
 After=network.target
 [Service]
-User=root
+User=isvc
 ExecStart=/usr/local/bin/tuic -c /etc/tuic/tuic.json
 Restart=on-failure
-RestartSec=10
-LimitNOFILE=infinity
+RestartSec=5
+LimitNOFILE=65536
 [Install]
 WantedBy=multi-user.target
 EOF
